@@ -1,0 +1,106 @@
+{
+  "orcid": "0000-0002-7333-3274",
+  "source": "https://orcid.org/0000-0002-7333-3274",
+  "updated": "2026-10-05",
+  "publications": [
+    {
+      "title": "Spontaneous and indefinite blinking in upconverting nanoparticles for ångström-precision multicolour super-resolution imaging",
+      "journal": "Nature Nanotechnology",
+      "year": "2026",
+      "date": "2026-09",
+      "authors": [
+        "Saptarshi Mandal",
+        "Harrison W. Toll",
+        "Kaibo Ma",
+        "Irmuun Tommy Altankhuyag",
+        "Lidao Li",
+        "Wanlin Zhang",
+        "João F. Shida",
+        "Chunte Sam Peng"
+      ],
+      "doi": "10.1038/s41565-026-02233-x",
+      "url": "https://doi.org/10.1038/s41565-026-02233-x",
+      "putCode": 221908301,
+      "type": "journal-article"
+    },
+    {
+      "title": "ErbB family receptor dimerization dynamics and dysregulation via long-term single-molecule imaging",
+      "journal": "Cell",
+      "year": "2026",
+      "date": "2026-04-28",
+      "authors": [
+        "Ma, Kaibo",
+        "Ma, Xiaojie",
+        "Shida, João F.",
+        "Niu, Zijian",
+        "Lin, Yuzhu Karlie",
+        "Mandal, Saptarshi",
+        "Dobbins, Alexandra",
+        "Golomb, Lior",
+        "Eck, Michael J.",
+        "Greulich, Heidi",
+        "Meyerson, Matthew",
+        "Peng, Chunte Sam"
+      ],
+      "doi": "10.1016/j.cell.2026.04.010",
+      "url": "https://doi.org/10.1016/j.cell.2026.04.010",
+      "putCode": 213114267,
+      "type": "journal-article"
+    },
+    {
+      "title": "Multicolor Long-Term Single-Particle Tracking Using 10 nm Upconverting Nanoparticles",
+      "journal": "Nano Letters",
+      "year": "2024",
+      "date": "2024-04-10",
+      "authors": [
+        "João F. Shida",
+        "Kaibo Ma",
+        "Harrison W. Toll",
+        "Omar Salinas",
+        "Xiaojie Ma",
+        "Chunte Sam Peng"
+      ],
+      "doi": "10.1021/acs.nanolett.4c00207",
+      "url": "https://doi.org/10.1021/acs.nanolett.4c00207",
+      "putCode": 155694187,
+      "type": "journal-article"
+    },
+    {
+      "title": "Low-dose high-resolution TOF-PET using ionization-activated multi-state low-Z detector media",
+      "journal": "Nuclear Instruments and Methods in Physics Research Section A: Accelerators, Spectrometers, Detectors and Associated Equipment",
+      "year": "2021",
+      "date": "2021-11",
+      "authors": [
+        "J.F. Shida",
+        "E. Spieglan",
+        "B.W. Adams",
+        "E. Angelico",
+        "K. Domurat-Sousa",
+        "A. Elagin",
+        "H.J. Frisch",
+        "P. La Riviere",
+        "A.H. Squires"
+      ],
+      "doi": "10.1016/j.nima.2021.165801",
+      "url": "https://doi.org/10.1016/j.nima.2021.165801",
+      "putCode": 99931323,
+      "type": "journal-article"
+    },
+    {
+      "title": "Tungsten Thermionic Emission as a Gauge for Low Pressures of Cesium Vapor",
+      "journal": "Instruments",
+      "year": "2020",
+      "date": "2020-11-05",
+      "authors": [
+        "João Shida",
+        "Fangjian Wu",
+        "Eric Spieglan",
+        "Mesut Çalışkan"
+      ],
+      "doi": "10.3390/instruments4040034",
+      "url": "https://doi.org/10.3390/instruments4040034",
+      "putCode": 82988783,
+      "type": "journal-article"
+    }
+  ]
+}

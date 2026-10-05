@@ -1,0 +1,47 @@
+name: Publish academic website
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+  schedule:
+    - cron: '17 9 * * 1'
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+concurrency:
+  group: pages
+  cancel-in-progress: false
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Check out website
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Refresh publications from ORCID
+        continue-on-error: true
+        run: python scripts/sync_orcid.py
+      - name: Validate website
+        run: python scripts/validate.py
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+      - name: Prepare public files
+        run: |
+          mkdir -p _site/assets _site/data
+          cp index.html styles.css script.js publications.bib .nojekyll _site/
+          cp assets/* _site/assets/
+          cp data/publications.json _site/data/
+      - name: Upload website
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+      - name: Publish to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
