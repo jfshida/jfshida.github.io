@@ -38,6 +38,7 @@ jobs:
           cp index.html styles.css script.js publications.bib .nojekyll _site/
           cp assets/* _site/assets/
           cp data/publications.json _site/data/
+          cp -R projects _site/
       - name: Upload website
         uses: actions/upload-pages-artifact@v3
         with:

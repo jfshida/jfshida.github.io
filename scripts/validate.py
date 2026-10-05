@@ -3,6 +3,7 @@ from html.parser import HTMLParser
 import json
 from pathlib import Path
 import re
+from urllib.parse import urlsplit, unquote
 
 ROOT = Path(__file__).resolve().parents[1]
 html = (ROOT / 'index.html').read_text(encoding='utf-8')
@@ -20,14 +21,24 @@ class Document(HTMLParser):
         if tag == 'article' and 'publication' in attrs.get('class', '').split():
             self.papers += 1
 
-doc = Document()
-doc.feed(html)
-assert len(doc.ids) == len(set(doc.ids)), 'Duplicate element IDs'
-for link in doc.links:
-    if link.startswith('#'):
-        assert link[1:] in doc.ids, f'Missing anchor: {link}'
-    elif not re.match(r'^[a-z]+:', link):
-        assert (ROOT / link).is_file(), f'Missing file: {link}'
+documents = {}
+for path in ROOT.rglob('*.html'):
+    parsed = Document()
+    parsed.feed(path.read_text(encoding='utf-8'))
+    assert len(parsed.ids) == len(set(parsed.ids)), f'Duplicate element IDs: {path}'
+    documents[path.resolve()] = parsed
+for path, parsed in documents.items():
+    for link in parsed.links:
+        url = urlsplit(link)
+        if url.scheme or url.netloc:
+            continue
+        target = (path.parent / unquote(url.path)).resolve() if url.path else path
+        if target.is_dir():
+            target = target / 'index.html'
+        assert target.is_file(), f'Missing local target: {link} in {path.name}'
+        if url.fragment and target in documents:
+            assert url.fragment in documents[target].ids, f'Missing anchor: {link}'
+doc = documents[(ROOT / 'index.html').resolve()]
 assert doc.papers == len(data['publications']) > 0, 'Incomplete publication list'
 for paper in data['publications']:
     assert paper['url'] in html, f'Missing publication: {paper["title"]}'

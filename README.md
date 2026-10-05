@@ -21,6 +21,10 @@ The GitHub Pages workflow refreshes ORCID on every push and each Monday at 09:17
 
 Run `python -m http.server 8765` in this directory, then visit `http://localhost:8765`. Run `python scripts/validate.py` to check publication coverage and local links. Search and year filters use JavaScript; all papers and links remain readable with JavaScript disabled. Citation buttons copy BibTeX, with a copyable dialog if clipboard permission is unavailable.
 
+## Projects
+
+The Projects navigation link opens `projects/index.html` at `/projects/`. It currently displays “More to come!”. Add future project pages in subfolders such as `projects/my-project/index.html`, and add links to them in `projects/index.html`. The publishing workflow includes the entire projects folder.
+
 ## GitHub Pages
 
 The repository must be named `jfshida.github.io` under the `jfshida` GitHub account. In **Settings → Pages**, choose **GitHub Actions** as the source. The included workflow publishes the site after a push to `main`.
