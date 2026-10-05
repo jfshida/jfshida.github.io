@@ -45,3 +45,8 @@ document.querySelectorAll('.copy-citation').forEach(button => {
   });
 });
 document.getElementById('copyright-year').textContent = new Date().getFullYear();
+const heroVideo = document.querySelector('.hero-video');
+if (heroVideo && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  heroVideo.autoplay = false;
+  heroVideo.pause();
+}

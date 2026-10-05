@@ -6,7 +6,7 @@ Personal research website for **https://jfshida.github.io/**. Plain HTML, CSS, a
 
 - Biography and affiliation: [Peng Lab team](https://www.sampenglab.org/team).
 - Publications: [ORCID 0000-0002-7333-3274](https://orcid.org/0000-0002-7333-3274).
-- The trajectory artwork is an original conceptual illustration, not experimental data.
+- Front-page microscopy video and U2OS microtubule image supplied by João Francisco Shida. The video is presented in its original aspect ratio with its 2 μm scale bar, muted playback, and player controls. The image caption records AF647–anti-α-tubulin labeling and a FWHM of 100 nm.
 - Contact links: ORCID, GitHub, and the public LinkedIn profile. No inferred email address is used.
 
 ## Updating the website

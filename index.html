@@ -25,7 +25,7 @@
     <section class="hero" aria-labelledby="hero-title">
       <div class="hero-copy">
         <p class="eyebrow"><span class="small-line"></span> Physical chemistry · Molecular imaging</p>
-        <h1 id="hero-title">João Francisco<br><em>Shida</em><span class="name-dot">.</span></h1>
+        <h1 id="hero-title">João <em>Francisco</em><br><em>Shida</em><span class="name-dot">.</span></h1>
         <p class="hero-intro">Following molecules.<br>Revealing mechanisms.</p>
         <p class="hero-description">I study molecular behavior through single-molecule imaging and nanoparticle probes, connecting physical chemistry with biological questions.</p>
         <div class="hero-links"><a class="button-primary" href="#publications">Explore publications <span aria-hidden="true">↓</span></a><a class="text-link" href="https://orcid.org/0000-0002-7333-3274"><span class="orcid-icon" aria-hidden="true">iD</span> ORCID <span aria-hidden="true">↗</span></a></div>
@@ -33,22 +33,11 @@
       </div>
       <figure class="molecule-figure">
         <div class="figure-top"><span>SINGLE-MOLECULE PERSPECTIVES</span><span class="figure-dot" aria-hidden="true"></span></div>
-        <svg class="trajectory" viewBox="0 0 480 440" role="img" aria-labelledby="trajectory-title trajectory-description">
-          <title id="trajectory-title">An illustration of three molecular trajectories</title>
-          <desc id="trajectory-description">Blue, green, and orange paths trace the motion of individual molecules. This is a conceptual illustration, not experimental data.</desc>
-          <defs><pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse"><circle cx="16" cy="16" r="1" fill="#7daca4" opacity=".25"/></pattern><radialGradient id="wash"><stop stop-color="#366e63" stop-opacity=".55"/><stop offset="1" stop-color="#173c37" stop-opacity="0"/></radialGradient><filter id="glow"><feGaussianBlur stdDeviation="7"/></filter></defs>
-          <rect width="480" height="440" fill="url(#grid)"/><ellipse cx="240" cy="220" rx="230" ry="200" fill="url(#wash)"/>
-          <g fill="none" stroke-width="1"><circle cx="240" cy="222" r="152" stroke="#93bfb3" opacity=".12"/><circle cx="240" cy="222" r="104" stroke="#93bfb3" opacity=".1"/><path d="M25 222H455M240 15V420" stroke="#93bfb3" opacity=".1"/></g>
-          <g fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.4">
-            <path d="M46 279 64 270 61 248 91 245 85 226 112 213 120 233 135 202 152 216 155 176 181 190 192 159 211 164 218 143 236 165 257 156 272 176 299 155 310 181 326 187 321 210 345 212 348 238 330 253 350 280 327 299" stroke="#a1d6ea" opacity=".85"/>
-            <path d="M135 360 153 343 145 327 168 319 183 338 203 318 193 298 214 280 234 292 257 270 247 248 266 231 252 214 271 193 293 199 282 177 307 158 294 143 319 122 326 137 349 108 372 115 387 92 412 105" stroke="#b9d9a8" opacity=".85"/>
-            <path d="M80 106 96 121 113 112 128 137 149 133 138 155 161 173 181 158 189 181 210 176 220 203 205 220 227 236 215 257 239 262 253 280 270 272 278 298 298 294 302 324 324 314 340 336 369 329 392 348" stroke="#f1b183" opacity=".85"/>
-          </g>
-          <g opacity=".7" filter="url(#glow)"><circle cx="327" cy="299" r="12" fill="#a1d6ea"/><circle cx="412" cy="105" r="12" fill="#b9d9a8"/><circle cx="392" cy="348" r="12" fill="#f1b183"/></g>
-          <g stroke="#e5eee7" stroke-width="1.5"><circle cx="327" cy="299" r="5" fill="#a1d6ea"/><circle cx="412" cy="105" r="5" fill="#b9d9a8"/><circle cx="392" cy="348" r="5" fill="#f1b183"/></g>
-          <g font-family="Arial,sans-serif" font-size="10" fill="#abc6bf" letter-spacing="1.5"><text x="34" y="415">SPACE</text><text x="389" y="415">× TIME</text></g>
-        </svg>
-        <figcaption><div class="figure-caption-title">A closer look at molecular motion</div><div class="figure-caption-sub"><span class="color-key"><i></i><i></i><i></i></span><span>Multicolor tracking · Conceptual illustration</span></div></figcaption>
+        <video class="hero-video" width="1920" height="1080" autoplay muted loop playsinline controls preload="metadata" poster="assets/microscopy-poster.jpg" aria-label="Microscopy video showing moving fluorescent spots, with a 2 micrometer scale bar" aria-describedby="video-caption">
+          <source src="assets/microscopy.mp4" type="video/mp4">
+          <p>Your browser does not support embedded video. <a href="assets/microscopy.mp4">Watch the microscopy video</a>.</p>
+        </video>
+        <figcaption id="video-caption"><div class="figure-caption-title">Microscopy in motion</div><div class="figure-caption-sub">Research video · Scale bar: 2 μm</div></figcaption>
       </figure>
     </section>
     <section class="about section" id="about" aria-labelledby="about-title">
@@ -66,6 +55,10 @@
           <article><span class="theme-number">02</span><div><h3>Long-term single-molecule imaging</h3><p>Following individual particles over extended periods to observe dynamic behavior that can be hidden in ensemble measurements.</p></div><span class="theme-symbol" aria-hidden="true">⌁</span></article>
           <article><span class="theme-number">03</span><div><h3>Receptor dynamics in living cells</h3><p>Direct observation of ErbB receptor interactions to investigate dimerization and dysregulation in cellular signaling.</p></div><span class="theme-symbol" aria-hidden="true">⥂</span></article>
         </div>
+        <figure class="research-micrograph">
+          <a href="assets/u2os-microtubules.png" aria-label="View the full-size U2OS cell microtubule image"><img src="assets/u2os-microtubules.png" width="777" height="842" loading="lazy" decoding="async" alt="Fluorescence image of U2OS cell microtubule networks labeled with AF647–anti-alpha-tubulin, displayed in red and yellow."></a>
+          <figcaption><p class="eyebrow">Fluorescence microscopy</p><h3>U2OS cell<br><em>microtubule networks.</em></h3><dl><div><dt>Label</dt><dd>AF647–anti-α-tubulin</dd></div><div><dt>FWHM</dt><dd>100 nm</dd></div></dl><a class="text-link" href="assets/u2os-microtubules.png">View full image <span aria-hidden="true">↗</span></a></figcaption>
+        </figure>
       </div>
     </section>
     <section class="publications-section section" id="publications" aria-labelledby="publications-title">

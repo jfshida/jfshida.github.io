@@ -16,7 +16,7 @@ class Document(HTMLParser):
         attrs = dict(attributes)
         if 'id' in attrs:
             self.ids.append(attrs['id'])
-        self.links += [attrs[key] for key in ('href', 'src') if key in attrs]
+        self.links += [attrs[key] for key in ('href', 'src', 'poster') if key in attrs]
         if tag == 'article' and 'publication' in attrs.get('class', '').split():
             self.papers += 1
 
