@@ -33,8 +33,7 @@ for path, parsed in documents.items():
         if url.scheme or url.netloc:
             continue
         target = (path.parent / unquote(url.path)).resolve() if url.path else path
-        if target.is_dir():
-            target = target / 'index.html'
+        assert not target.is_dir(), f'Folder link can show a file listing in local previews: {link} in {path.name}; link to index.html directly'
         assert target.is_file(), f'Missing local target: {link} in {path.name}'
         if url.fragment and target in documents:
             assert url.fragment in documents[target].ids, f'Missing anchor: {link}'

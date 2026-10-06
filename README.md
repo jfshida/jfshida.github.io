@@ -21,6 +21,8 @@ The GitHub Pages workflow refreshes ORCID on every push and each Monday at 09:17
 
 Run `python -m http.server 8765` in this directory, then visit `http://localhost:8765`. Run `python scripts/validate.py` to check publication coverage and local links. Search and year filters use JavaScript; all papers and links remain readable with JavaScript disabled. Citation buttons copy BibTeX, with a copyable dialog if clipboard permission is unavailable.
 
+Internal page links point directly to `index.html` rather than to folders, so navigation also works when opening the downloaded files without a web server. The validator checks this along with section anchors.
+
 ## Projects
 
 The Projects navigation link opens `projects/index.html` at `/projects/`. It lists two case studies:
