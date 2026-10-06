@@ -78,6 +78,7 @@ def author_html(name):
 
 def render(data):
     publications = data["publications"]
+    contributions = json.loads((ROOT / "data/contributions.json").read_text(encoding="utf-8"))
     entries = []
     bibtex = []
     for index, paper in enumerate(publications):
@@ -88,11 +89,15 @@ def render(data):
         bib = f"@article{{{key},\n  title = {{{paper['title']}}},\n  author = {{{' and '.join(paper['authors'])}}},\n  journal = {{{paper['journal']}}},\n  year = {{{paper['year']}}},\n  doi = {{{paper['doi']}}},\n  url = {{{paper['url']}}}\n}}"
         bibtex.append(bib)
         search = escape(" ".join([paper["title"], paper["journal"], paper["year"], " ".join(paper["authors"])]), quote=True)
+        contribution = contributions.get(paper['doi'].lower())
+        contribution_html = ''
+        if contribution:
+            contribution_html = f'''<div class="paper-contribution"><span class="role-badge">{escape(contribution['role'])}</span><p><strong>My contribution:</strong> {escape(contribution['contribution'])}</p><a class="text-link" href="{escape(contribution['project'], quote=True)}">Explore project <span aria-hidden="true">↗</span></a></div>'''
         entries.append(f'''<article class="publication" data-year="{escape(paper['year'])}" data-search="{search}">
           <div class="paper-year">{escape(paper['year'] or '—')}</div>
           <div class="paper-body"><div class="paper-journal">{escape(paper['journal'] or paper['type'].replace('-', ' ').title())}</div>
           <h3><a href="{escape(paper['url'], quote=True)}">{escape(paper['title'])}<span aria-hidden="true" class="paper-arrow">↗</span></a></h3>
-          <p class="authors">{authors}</p>
+          <p class="authors">{authors}</p>{contribution_html}
           <div class="paper-actions"><a href="{escape(paper['url'], quote=True)}">Read paper <span aria-hidden="true">↗</span></a>
           <a href="https://orcid.org/{ORCID}">ORCID record <span aria-hidden="true">↗</span></a>
           <button type="button" class="copy-citation" data-citation="{escape(bib, quote=True)}">Copy BibTeX</button></div></div></article>''')
