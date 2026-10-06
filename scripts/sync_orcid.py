@@ -92,7 +92,7 @@ def render(data):
         contribution = contributions.get(paper['doi'].lower())
         contribution_html = ''
         if contribution:
-            contribution_html = f'''<div class="paper-contribution"><span class="role-badge">{escape(contribution['role'])}</span><p><strong>My contribution:</strong> {escape(contribution['contribution'])}</p><a class="text-link" href="{escape(contribution['project'], quote=True)}">Explore project <span aria-hidden="true">↗</span></a></div>'''
+            contribution_html = f'''<div class="paper-contribution"><span class="role-badge">{escape(contribution['role'])}</span><p><strong>My contribution:</strong> {escape(contribution['contribution'])}</p><a class="text-link" href="{escape(contribution['project'], quote=True)}">Project details <span aria-hidden="true">↗</span></a></div>'''
         entries.append(f'''<article class="publication" data-year="{escape(paper['year'])}" data-search="{search}">
           <div class="paper-year">{escape(paper['year'] or '—')}</div>
           <div class="paper-body"><div class="paper-journal">{escape(paper['journal'] or paper['type'].replace('-', ' ').title())}</div>

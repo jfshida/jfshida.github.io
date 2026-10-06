@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>ErbB dynamics: microscope to analysis | João Francisco Shida</title>
+  <title>ErbB receptor dynamics | João Francisco Shida</title>
   <meta name="description" content="Co-first-author research project: João Francisco Shida's microscope construction and data analysis for the 2026 Cell paper on ErbB receptor dynamics.">
   <meta name="theme-color" content="#183b38">
-  <meta property="og:title" content="ErbB receptor dynamics: microscope to analysis">
+  <meta property="og:title" content="ErbB receptor dynamics">
   <meta property="og:description" content="Microscope construction and quantitative data analysis by João Francisco Shida. Cell, 2026.">
   <meta property="og:type" content="article">
   <meta property="og:url" content="https://jfshida.github.io/projects/erbb-dynamics/">
@@ -22,19 +22,19 @@
   </header>
   <main id="main" class="case-main">
     <a class="text-link case-back" href="../"><span aria-hidden="true">←</span> All projects</a>
-    <div class="case-heading"><p class="eyebrow"><span class="small-line"></span> Cell · 2026 · Research project</p><h1>ErbB receptor dynamics.<br><em>Microscope to analysis.</em></h1><p class="project-intro">Connecting a custom imaging instrument with quantitative analysis to understand receptor interactions in living cells.</p></div>
+    <div class="case-heading"><p class="eyebrow"><span class="small-line"></span> Cell · 2026 · Research project</p><h1>ErbB receptor<br><em>dynamics.</em></h1><p class="project-intro">We used long-term single-molecule imaging to study how ErbB receptors interact in living cells.</p></div>
     <section class="contribution-panel" aria-labelledby="contribution-title">
       <div><span class="role-badge">Co-first author</span><h2 id="contribution-title">My contribution</h2></div>
-      <p>I was responsible for <strong>all data analysis and microscope construction</strong> for this study. My work connected the experimental platform with the quantitative interpretation of the measurements.</p>
+      <p>I built the microscope and carried out all data analysis for this study, including the analysis of receptor diffusion and dimer lifetimes.</p>
     </section>
     <section class="case-section case-overview" aria-labelledby="question-title">
-      <div><p class="eyebrow">The scientific question</p><h2 id="question-title">When do receptors<br><em>find a partner?</em></h2><p>The study followed EGFR, HER2, and HER3 in living cells to resolve dimer formation, dissociation, and the effects of oncogenic mutations.</p><a class="text-link" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC13195542/">Read the open manuscript <span aria-hidden="true">↗</span></a></div>
+      <div><p class="eyebrow">Research question</p><h2 id="question-title">Receptor interactions<br><em>in living cells</em></h2><p>We followed EGFR, HER2, and HER3 to measure dimer formation and dissociation, and examined how these interactions change with oncogenic mutations.</p><a class="text-link" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC13195542/">Read the open manuscript <span aria-hidden="true">↗</span></a></div>
       <figure class="case-video"><video width="1920" height="1080" controls muted playsinline preload="none" poster="../../assets/microscopy-poster.jpg" aria-label="Microscopy video of EGFR dynamics in the live cell membrane" aria-describedby="case-video-caption"><source src="../../assets/microscopy.mp4" type="video/mp4"><p><a href="../../assets/microscopy.mp4">Watch the microscopy video</a>.</p></video><figcaption id="case-video-caption">EGFR dynamics in the live cell membrane.<br>Real time · Scale bar: 2 μm · Research footage</figcaption></figure>
     </section>
     <dl class="project-metrics" aria-label="Published imaging performance"><div><dt>Continuous tracking</dt><dd>&gt;15 <span>minutes</span></dd></div><div><dt>Time resolution</dt><dd>100 <span>ms</span></dd></div><div><dt>Localization precision</dt><dd>6.7–6.9 <span>nm</span></dd></div></dl>
     <p class="metric-note">Reported live-cell imaging performance in the <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC13195542/">published study</a>.</p>
     <section class="case-section" aria-labelledby="methods-title">
-      <p class="eyebrow">Instrument + computation</p><h2 id="methods-title">Two parts of<br><em>one measurement.</em></h2>
+      <p class="eyebrow">Methods</p><h2 id="methods-title">Microscope setup<br><em>and data analysis</em></h2>
       <div class="case-columns">
         <article><span class="case-number">01</span><h3>Building the microscope</h3><p>The custom instrument combined 976 nm excitation, switchable epi/TIRF illumination, four-channel detection, active focus stabilization, and a controlled live-cell environment.</p><ul class="skill-list"><li>Optical integration</li><li>Multichannel detection</li><li>Focus stability</li></ul></article>
         <article><span class="case-number">02</span><h3>Analyzing the data</h3><p>The workflow used SLIMfast2 and Piscis/ByteTrack for trajectories, Bayesian hidden Markov models for diffusion states, GPU computation, and dimer-lifetime analysis in Python and MATLAB.</p><ul class="skill-list"><li>Python / MATLAB</li><li>Bayesian inference</li><li>GPU computation</li></ul></article>
@@ -42,8 +42,8 @@
       <p class="case-method-note">Methods summarized from the paper’s <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC13195542/">STAR Methods</a>.</p>
     </section>
     <section class="case-section case-columns" aria-label="Results and validation">
-      <div><p class="eyebrow">Study outcome</p><h2>Interactions,<br><em>resolved over time.</em></h2><p>The measurements revealed stable ligand-independent EGFR mutant dimers and constitutive HER2/HER3 homodimers, helping resolve how mutations alter receptor interactions.</p></div>
-      <div><p class="eyebrow">Validation + limitations</p><h3>Accounting for imperfect tracks</h3><p>Manual trajectory review and truncation simulations checked robustness. Crowded spots and out-of-focus motion remained limitations; sparse labeling made measured dimer fractions lower bounds.</p><h3>Relevance to autonomous experimentation</h3><p>This project demonstrates the connection between instrument development and quantitative interpretation—a foundation for building experimental systems whose decisions depend on reliable measurements.</p></div>
+      <div><p class="eyebrow">Results</p><h2>Main <em>findings</em></h2><p>We observed stable, ligand-independent dimers of mutant EGFR, as well as constitutive HER2 and HER3 homodimers.</p></div>
+      <div><p class="eyebrow">Validation and limitations</p><h3>Trajectory review</h3><p>We reviewed trajectories manually and used simulations to assess the effects of track truncation. Crowded spots and out-of-focus motion could interrupt tracks. Sparse labeling meant that the measured dimer fractions were lower bounds.</p></div>
     </section>
     <section class="case-publication" aria-labelledby="paper-title"><p class="eyebrow">Associated publication</p><h2 id="paper-title">ErbB family receptor dimerization dynamics and dysregulation via long-term single-molecule imaging</h2><p>Cell · 2026 · Co-first author</p><div class="case-links"><a class="button-primary" href="https://doi.org/10.1016/j.cell.2026.04.010">Read paper <span aria-hidden="true">↗</span></a><a class="text-link" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC13195542/">Open manuscript + supplements <span aria-hidden="true">↗</span></a><a class="text-link" href="https://www.sampenglab.org/publications">Authorship record <span aria-hidden="true">↗</span></a></div></section>
     <div class="case-next"><a class="text-link" href="../ucnp-optical-measurements/">Next project: nanoparticle optical measurements <span aria-hidden="true">→</span></a></div>
