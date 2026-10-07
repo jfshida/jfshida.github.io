@@ -1,6 +1,7 @@
 :root{--paper:#f8f8f2;--ink:#183b38;--muted:#5b6b63;--line:#d9dfd5;--accent:#b75e3e;--sage:#eef1e7;--serif:Georgia,'Times New Roman',serif;--sans:Inter,'Segoe UI',Arial,sans-serif}
 
 /* Research projects and paper-specific contributions. */
+.news-list{list-style:none;padding:0;margin:30px 0 0}.news-list li{border-top:1px solid var(--line)}.news-list li:last-child{border-bottom:1px solid var(--line)}.news-list a{display:grid;grid-template-columns:140px minmax(0,1fr) 18px;gap:20px;align-items:baseline;padding:20px 0;text-decoration:none}.news-source{font-size:11px;color:var(--muted);line-height:1.7}.news-title{font-size:15px;line-height:1.7;overflow-wrap:anywhere}.news-list a:hover .news-title{text-decoration:underline}.news-list a>span:last-child{font-size:14px;color:var(--accent);text-align:right}@media(max-width:700px){.news-list a{grid-template-columns:minmax(0,1fr) 18px;gap:7px 15px;padding:18px 0}.news-source{grid-column:1/-1}.news-title{font-size:14px}}
 .project-intro{max-width:660px;font-size:17px;line-height:1.8;color:var(--muted);margin-bottom:40px}
 .project-directory{margin:55px 0 35px;border-bottom:1px solid var(--line)}
 .project-entry{display:grid;grid-template-columns:minmax(160px,1fr) minmax(0,3fr);gap:45px;padding:46px 0;border-top:1px solid var(--line)}

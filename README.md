@@ -25,10 +25,13 @@ Internal page links point directly to `index.html` rather than to folders, so na
 
 ## Projects
 
-The Projects navigation link opens `projects/index.html` at `/projects/`. It lists two case studies:
+The Projects navigation link opens `projects/index.html` at `/projects/`. It lists three case studies:
 
 - `projects/erbb-dynamics/index.html`: microscope construction and all data analysis for the co-first-author 2026 Cell paper.
 - `projects/ucnp-optical-measurements/index.html`: all optical measurements for the co-first-author 2024 Nano Letters paper.
+- `projects/spontaneous-blinking/index.html`: microscope design, operation, optimization, and input on data analysis as a contributing author of the 2026 Nature Nanotechnology paper.
+
+The ErbB and spontaneous-blinking pages include news coverage supplied by João Francisco Shida. MIT News uses its public URL; Mirage News, Nanowerk, and Optics.org use direct article links instead of news-tracking redirects. Edit the `news-list` in each project HTML file to update these links.
 
 Edit those HTML files to update the project narratives. Scientific descriptions and performance values link to the papers; personal responsibilities were supplied by João Francisco Shida. Co-first authorship is confirmed by the Peng Lab publication list. The ErbB page reuses the existing research video, without asserting that this clip is a specific supplementary movie.
 

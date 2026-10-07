@@ -1,4 +1,9 @@
 {
+  "10.1038/s41565-026-02233-x": {
+    "role": "Contributing author",
+    "contribution": "I helped with microscope design, operation, and optimization, and provided input on data analysis.",
+    "project": "projects/spontaneous-blinking/index.html"
+  },
   "10.1016/j.cell.2026.04.010": {
     "role": "Co-first author",
     "contribution": "I built the microscope and carried out the data analysis.",
