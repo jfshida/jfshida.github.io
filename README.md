@@ -35,7 +35,7 @@ The ErbB and spontaneous-blinking pages include news coverage supplied by João 
 
 Edit those HTML files to update the project narratives. Scientific descriptions and performance values link to the papers; personal responsibilities were supplied by João Francisco Shida. Co-first authorship is confirmed by the Peng Lab publication list. The ErbB page reuses the existing research video, without asserting that this clip is a specific supplementary movie.
 
-Edit `data/contributions.json` to update the contribution notes and project links under the corresponding publications. These manually maintained notes are merged by `scripts/sync_orcid.py` and survive automatic ORCID refreshes. ORCID metadata remains separate in `data/publications.json`.
+Edit `data/contributions.json` to update the authorship labels and project links under the corresponding publications. These manually maintained details are merged by `scripts/sync_orcid.py` and survive automatic ORCID refreshes. Personal contribution sections are omitted. ORCID metadata remains separate in `data/publications.json`.
 
 Add future project pages in subfolders such as `projects/my-project/index.html`, and add links to them in `projects/index.html`. The publishing workflow includes the entire projects folder.
 
